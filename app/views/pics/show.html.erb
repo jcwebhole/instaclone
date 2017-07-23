@@ -3,6 +3,7 @@
 <p><%= @pic.description %></p>
 <p><%= @pic.user.email %></p>
 
+<%= link_to 'like '+ @pic.get_upvotes.size.to_s, like_pic_path(@pic), method: :put, class:"btn btn-default" %>
 
 <%= link_to 'Back', root_path %>
 <%= link_to 'Edit', edit_pic_path %>
