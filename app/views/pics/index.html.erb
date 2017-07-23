@@ -1,1 +1,7 @@
 <h1>Placeholder!</h1>
+
+<% @pics.each do |pic| %>
+<%= link_to pic.title, pic%>
+<% end %>
+
+<%= link_to 'New', new_pic_path %>
