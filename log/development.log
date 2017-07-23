@@ -855,3 +855,506 @@ Processing by PicsController#show as HTML
 Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 124.106.57.179 at 2017-07-23 02:31:17 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.erb within layouts/application
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at DESC[0m
+  Rendered pics/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 124.106.57.179 at 2017-07-23 02:31:40 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.erb within layouts/application
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at DESC[0m
+  Rendered pics/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 124.106.57.179 at 2017-07-23 02:32:36 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.erb within layouts/application
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at DESC[0m
+  Rendered pics/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 275ms (Views: 260.7ms | ActiveRecord: 0.9ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentImageToPics (20170723023542)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentImageToPics (20170723023542)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentImageToPics (20170723023542)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentImageToPics (20170723023542)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "pics" ADD "image_file_name" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "pics" ADD "image_content_type" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "pics" ADD "image_file_size" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "pics" ADD "image_updated_at" datetime[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170723023542"]]
+  [1m[35m (13.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pics_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pics_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 124.106.57.179 at 2017-07-23 02:40:26 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.erb within layouts/application
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at DESC[0m
+  Rendered pics/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 226ms (Views: 210.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pics/new" for 124.106.57.179 at 2017-07-23 02:41:07 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/new.html.erb within layouts/application
+  Rendered pics/_form.html.erb (115.7ms)
+  Rendered pics/new.html.erb within layouts/application (117.3ms)
+Completed 200 OK in 231ms (Views: 146.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/pics" for 124.106.57.179 at 2017-07-23 02:41:43 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NCvJgFQEE4acsqiqtXXhlMFt2EbV3oSJMPxk1GdCLgYRT7OEcYfDZOi9dYrztcTCABVWVAFGiBYYodD0QiaQ6A==", "pic"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007ff794fd28c8 @tempfile=#<Tempfile:/tmp/RackMultipart20170723-27579-1e0mu0w.jpg>, @original_filename="10505274_10152380960374888_951658376603281299_n.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pic[image]\"; filename=\"10505274_10152380960374888_951658376603281299_n.jpg\"\r\nContent-Type: image/jpeg\r\n">, "title"=>"random pic", "description"=>"nothing"}, "commit"=>"Create Pic"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :image
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "pics" ("title", "description", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "random pic"], ["description", "nothing"], ["created_at", "2017-07-23 02:41:43.792008"], ["updated_at", "2017-07-23 02:41:43.792008"], ["user_id", 1]]
+  [1m[35m (18.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://instaclone-jasonbruno.c9users.io/pics/4
+Completed 302 Found in 125ms (ActiveRecord: 19.6ms)
+
+
+Started GET "/pics/4" for 124.106.57.179 at 2017-07-23 02:41:43 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPic Load (0.9ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pics/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 47ms (Views: 36.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/pics/4/edit" for 124.106.57.179 at 2017-07-23 02:41:52 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pics/edit.html.erb within layouts/application
+  Rendered pics/_form.html.erb (9.1ms)
+  Rendered pics/edit.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/4" for 124.106.57.179 at 2017-07-23 02:42:45 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pics/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 124ms (Views: 69.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 124.106.57.179 at 2017-07-23 02:42:48 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.erb within layouts/application
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at DESC[0m
+  Rendered pics/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/new" for 124.106.57.179 at 2017-07-23 02:42:50 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/new.html.erb within layouts/application
+  Rendered pics/_form.html.erb (24.8ms)
+  Rendered pics/new.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 62ms (Views: 52.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/pics" for 124.106.57.179 at 2017-07-23 02:43:04 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K9VaCi9btesgJ9xdfNq73/A+MSPIYM7Y8+nMDWDEAEgOsSAOCthlCVQoAX06Gp6JMUa/MRz4wkfbtHgtRaC+pg==", "pic"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007ff798261618 @tempfile=#<Tempfile:/tmp/RackMultipart20170723-27579-pizk32.jpg>, @original_filename="18010786_10154743778074888_5564977737500682883_n.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pic[image]\"; filename=\"18010786_10154743778074888_5564977737500682883_n.jpg\"\r\nContent-Type: image/jpeg\r\n">, "title"=>"me", "description"=>"my pic"}, "commit"=>"Create Pic"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d08c821832c0f5e82d19fe2037dcb17220170723-27579-18h0chq.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d08c821832c0f5e82d19fe2037dcb17220170723-27579-18h0chq.jpg[0]'
+Command :: convert '/tmp/d08c821832c0f5e82d19fe2037dcb17220170723-27579-18h0chq.jpg[0]' -auto-orient -resize "300x300>" '/tmp/fd60a0df7b0bbc5636a4d7869d10b0da20170723-27579-usbtok'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/tmp/d08c821832c0f5e82d19fe2037dcb17220170723-27579-s133rp.jpg'
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "pics" ("title", "description", "created_at", "updated_at", "user_id", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "me"], ["description", "my pic"], ["created_at", "2017-07-23 02:43:05.309071"], ["updated_at", "2017-07-23 02:43:05.309071"], ["user_id", 1], ["image_file_name", "18010786_10154743778074888_5564977737500682883_n.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 193343], ["image_updated_at", "2017-07-23 02:43:04.758763"]]
+  [1m[35m (18.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://instaclone-jasonbruno.c9users.io/pics/5
+Completed 302 Found in 587ms (ActiveRecord: 20.0ms)
+
+
+Started GET "/pics/5" for 124.106.57.179 at 2017-07-23 02:43:05 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pics/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 25ms (Views: 21.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 124.106.57.179 at 2017-07-23 02:43:09 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.erb within layouts/application
+  [1m[36mPic Load (0.4ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at DESC[0m
+  Rendered pics/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pics/5" for 124.106.57.179 at 2017-07-23 02:44:11 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pics/show.html.erb within layouts/application
+  Rendered pics/show.html.erb within layouts/application (294.7ms)
+Completed 500 Internal Server Error in 300ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `pic' for #<#<Class:0x00000005a00550>:0x007ff784293b18>
+Did you mean?  @pic):
+    1: <%= image_tag(pic.image) %>
+    2: <h1><%= @pic.title %></h1>
+    3: <p><%= @pic.description %></p>
+    4: <p><%= @pic.user.email %></p>
+  
+app/views/pics/show.html.erb:1:in `_app_views_pics_show_html_erb__622802731399055213_70350525440680'
+Started GET "/pics/5" for 124.106.57.179 at 2017-07-23 02:44:38 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pics/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 124.106.57.179 at 2017-07-23 02:45:49 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.erb within layouts/application
+  [1m[36mPic Load (0.4ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at DESC[0m
+  Rendered pics/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/original/missing.png" for 124.106.57.179 at 2017-07-23 02:45:50 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 124.106.57.179 at 2017-07-23 02:46:31 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.erb within layouts/application
+  Rendered pics/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/app/views/pics/index.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/ubuntu/workspace/app/views/pics/index.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/pics/index.html.erb:12: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/pics/index.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+app/views/pics/index.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/pics/index.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 124.106.57.179 at 2017-07-23 02:46:44 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.erb within layouts/application
+  [1m[36mPic Load (0.4ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at DESC[0m
+  Rendered pics/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/medium/missing.png" for 124.106.57.179 at 2017-07-23 02:46:44 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 124.106.57.179 at 2017-07-23 02:46:59 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.erb within layouts/application
+  [1m[36mPic Load (0.4ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at DESC[0m
+  Rendered pics/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 55ms (Views: 52.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/medium/missing.png" for 124.106.57.179 at 2017-07-23 02:46:59 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pics/5" for 124.106.57.179 at 2017-07-23 02:47:03 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pics/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 32ms (Views: 28.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/medium/missing.png" for 124.106.57.179 at 2017-07-23 02:47:03 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/images/medium/missing.png" for 124.106.57.179 at 2017-07-23 02:47:05 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pics/5" for 124.106.57.179 at 2017-07-23 02:47:29 +0000
+Started GET "/images/medium/missing.png" for 124.106.57.179 at 2017-07-23 02:47:29 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#show as HTML
+  
+  Parameters: {"id"=>"5"}
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering pics/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 145ms (Views: 141.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pics/5/edit" for 124.106.57.179 at 2017-07-23 02:48:09 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPic Load (0.4ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pics/edit.html.erb within layouts/application
+  Rendered pics/_form.html.erb (6.8ms)
+  Rendered pics/edit.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pics/5/edit" for 124.106.57.179 at 2017-07-23 02:48:46 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pics/edit.html.erb within layouts/application
+  Rendered pics/_form.html.erb (7.6ms)
+  Rendered pics/edit.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.3ms)
+
+
