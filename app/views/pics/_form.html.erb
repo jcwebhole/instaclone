@@ -1,7 +1,7 @@
 <%= simple_form_for @pic, html:{multipart: true} do |f| %>
 <% if @pic.errors.any? %>
 <%= plurarize(@pic.errors.count, 'error') %>
-<% @pic.errors.full_message.each do |msg| %>
+<% @pic.errors.full_messages.each do |msg| %>
 <%= msg %>
 <% end %>
 <% end %>
