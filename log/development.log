@@ -678,3 +678,180 @@ Processing by PicsController#new as HTML
 Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20170723021848)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170723021848"]]
+  [1m[35m (15.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/users/sign_up" for 124.106.57.179 at 2017-07-23 02:20:51 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (57.4ms)
+Completed 200 OK in 273ms (Views: 250.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 124.106.57.179 at 2017-07-23 02:21:20 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OPeyeyZmh+D/rwoyItyyl1iDGpuxwgbtDFg6V748skB1Qs/biv8BP1dBH5TlnZ3eTPxRYcHVhfPVg6+5tLtuIA==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "test@test.com"], ["encrypted_password", "$2a$11$VD3UXD26MyBtvYiO6gqdyOYERRDi/ucLrXsRkAM9UcWKgyUsBbaNy"], ["created_at", "2017-07-23 02:21:20.531304"], ["updated_at", "2017-07-23 02:21:20.531304"]]
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2017-07-23 02:21:20.548506"], ["last_sign_in_at", "2017-07-23 02:21:20.548506"], ["current_sign_in_ip", "124.106.57.179"], ["last_sign_in_ip", "124.106.57.179"], ["updated_at", "2017-07-23 02:21:20.549539"], ["id", 1]]
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://instaclone-jasonbruno.c9users.io/
+Completed 302 Found in 218ms (ActiveRecord: 28.3ms)
+
+
+Started GET "/" for 124.106.57.179 at 2017-07-23 02:21:21 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.erb within layouts/application
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at DESC[0m
+  Rendered pics/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 41ms (Views: 36.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 124.106.57.179 at 2017-07-23 02:22:19 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.erb within layouts/application
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at DESC[0m
+  Rendered pics/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 66ms (Views: 53.0ms | ActiveRecord: 1.5ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToPics (20170723022411)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "pics" ADD "user_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_pics_on_user_id" ON "pics" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170723022411"]]
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pics_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pics_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mPic Load (0.5ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" ORDER BY "pics"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" ORDER BY "pics"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "pics" SET "updated_at" = ?, "user_id" = ? WHERE "pics"."id" = ?[0m  [["updated_at", "2017-07-23 02:26:55.073124"], ["user_id", 1], ["id", 2]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/pics/2" for 124.106.57.179 at 2017-07-23 02:27:29 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pics/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 231ms (Views: 203.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 124.106.57.179 at 2017-07-23 02:28:04 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.erb within layouts/application
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at DESC[0m
+  Rendered pics/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/new" for 124.106.57.179 at 2017-07-23 02:29:24 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/new.html.erb within layouts/application
+  Rendered pics/_form.html.erb (92.5ms)
+  Rendered pics/new.html.erb within layouts/application (94.5ms)
+Completed 200 OK in 198ms (Views: 126.1ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/pics" for 124.106.57.179 at 2017-07-23 02:29:30 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/hco69ijSSXkjb4g6QdLPiaZYqpTeU0+umRVw9OcU/Dbc1Lv/SCZx5CCYwCvx25o5+HsuIfhQaGSOeHj9vjtHg==", "pic"=>{"title"=>"another pic", "description"=>"desc"}, "commit"=>"Create Pic"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pics" ("title", "description", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "another pic"], ["description", "desc"], ["created_at", "2017-07-23 02:29:30.368742"], ["updated_at", "2017-07-23 02:29:30.368742"], ["user_id", 1]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://instaclone-jasonbruno.c9users.io/pics/3
+Completed 302 Found in 95ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/pics/3" for 124.106.57.179 at 2017-07-23 02:29:31 +0000
+Cannot render console from 124.106.57.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pics/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.6ms)
+
+
